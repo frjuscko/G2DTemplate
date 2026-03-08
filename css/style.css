@@ -1,0 +1,255 @@
+:root {
+    --primary-color: #0d6efd;
+    --accent: rgb(255, 204, 0);
+    --neutre: white;
+    --texte: #333;
+    --details: #333333e2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.hero-section {
+    width: 100vw;
+    height: 100vh;
+    color: var(--neutre);
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-slides {
+    display: flex;
+    width: 400%;
+    height: 100%;
+    transition: transform 0.8s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.carousel-slide {
+    width: 25%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+}
+
+.slide-1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)),
+        url('../img/background-header.png');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+.slide-2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)),
+        url('../img/primaire.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.slide-3 {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)),
+        url('../img/secondaire1.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.slide-4 {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url('../img/technique1.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.slide-title {
+    font-size: 4rem;
+    width: 50%;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    transform: translateY(-100px);
+    opacity: 0;
+    transition: transform 0.7s ease-out, opacity 0.7s ease-out;
+}
+
+.slide-text {
+    width: 44%;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    transform: translateY(100px);
+    opacity: 0;
+    font-family: 'Quicksand', sans-serif;
+    transition: transform 0.7s ease-out 0.2s, opacity 0.7s ease-out 0.2s;
+}
+
+.btn {
+    display: inline-block;
+    color: var(--neutre);
+    background: var(--primary-color);
+    padding: 20px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transform: translateX(-100px);
+    opacity: 0;
+    transition: transform 0.7s ease-out 0.4s, opacity 0.7s ease-out 0.4s, all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    background: var(--texte);
+    color: var(--neutre);
+}
+
+/* Animation des éléments quand la slide est active */
+.carousel-slide.active .slide-title {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.carousel-slide.active .slide-text {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.carousel-slide.active .btn {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.carousel-nav {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    gap: 12px;
+    z-index: 10;
+    padding: 0 6%;
+}
+
+.nav-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: transparent;
+    border: 1px solid var(--neutre);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-dot.active {
+    background-color: var(--accent);
+    box-shadow: 0 0 10px var(--accent);
+    transform: scale(1.2);
+    border: none;
+    width: 9px;
+    height: 9px;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.059);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(255, 255, 255, 0.171);
+}
+
+.prev-btn {
+    left: 20px;
+}
+
+.next-btn {
+    right: 20px;
+}
+
+/**/
+.part{
+    padding: 0 6%;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.right{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 6% 6%;
+}
+.details {
+    font-size: 0.7em;
+}
+
+.fleche {
+    margin-left: 10px;
+}
+.hero-stat{
+    display: flex;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.044);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.392);
+    border-radius: 10px;
+    gap: 10px;
+}
+.hero-stat img{
+    width: 130px;
+    border-radius: 5px;
+}
+.hero-stat-texte{
+    color: var(--neutre);
+    padding: 5px;
+}
+.hero-stat-texte p{
+    margin: 10px 0;
+}
+.utilisateurs{
+    display: flex;
+    align-items: end;
+    padding: 10px 0;
+    gap: 10px;
+}
+.utilisateur{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, rgb(179, 1, 1), red);
+}
+/* chevauchement */
+.utilisateur + .utilisateur{
+    margin-left:-20px;
+}
+/**/
