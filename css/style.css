@@ -22,6 +22,11 @@ ul{
 a {
     text-decoration: none;
 }
+.mobile{
+    width: 100%;
+    justify-content: space-between;
+    display: none;
+}
 header{
     position: absolute;
     z-index: 1;
@@ -34,6 +39,7 @@ header{
     background: var(--neutre);
     position: fixed;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.133);
+    z-index: 99;
 }
 .navbar2 .logo img{
     filter: brightness(1);
@@ -105,7 +111,25 @@ header{
     position: relative;
     align-items: center;
 }
-
+.menu-links{
+    position: absolute;
+    background: var(--neutre);
+    top: 100%;
+    left: 0;
+    width: 100vw;
+    padding: 15px 20px;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.133);
+    transform: scaleY(0);
+    transform-origin: top;
+}
+.deplie{
+    transform: scaleY(1);
+}
+.contacts{
+    margin: 15px 0 0 0;
+    border-top: 1px solid #0d6dfd50;
+}
 .hero-section {
     width: 100vw;
     height: 100vh;
@@ -350,6 +374,33 @@ header{
     color: var(--neutre);
     cursor: pointer;
 }
+.contact-btn:hover{
+    background: #0d6dfd15;
+    color: var(--primary-color);
+    padding: 10px 15px;
+    border-radius: 7px;
+}
+.menu-links-btn{
+    background: transparent;
+    border: none;
+    color: var(--neutre);
+    cursor: pointer;
+}
+.menu-links-btn:hover, .menu-links-btn.active{
+    background: #0d6dfd15;
+    color: var(--primary-color);
+    padding: 10px 15px;
+    border-radius: 7px;
+}
+.navbar2 .menu-links-btn{
+    color: var(--texte);
+}
+.fluide{
+    transition: .5s ease;
+}
+.fluide1{
+    transition: .2s ease;
+}
 .navbar2 .contact-btn{
     color: var(--texte);
 }
@@ -377,6 +428,11 @@ header{
 .contact-link{
     color: var(--texte);
     transition: .5s ease;
+    display: flex;
+    align-items: center;
+}
+.contact-link svg{
+    margin-right: 10px;
 }
 .contact:hover .contact-link{
     color: var(--primary-color);
@@ -417,11 +473,13 @@ header{
     color: var(--texte);
     text-align: center;
     padding: 30px 0;
+    font-weight: 900;
 }
 .section-sous-title1{
     font-size: 3em;
     color: var(--texte);
     padding: 30px 0;
+    font-weight: 900;
 }
 .section-text{
     font-size: 1em;
@@ -433,11 +491,16 @@ header{
     margin: 0 0 30px 0;
 }
 .section-btn{
-    color: var(--neutre);
-    background: var(--primary-color);
     padding: 10px 20px;
     border-radius: 20px;
     font-size: 0.8em;
+}
+.bleu{
+    background: var(--primary-color);
+    color: var(--neutre);
+}
+.bleu:hover{
+    background: var(--texte);
 }
 .avantages{
     display: flex;
@@ -450,6 +513,9 @@ header{
     border-radius: 10px;
     text-align: center;
 }
+.avantage:hover{
+    background: #0d6dfd15;
+}
 .decale-haut{
     transform: translateY(-30px);
 }
@@ -457,6 +523,20 @@ header{
     width: 50px;
     height: 50px;
     color: var(--primary-color);
+}
+.avantage:hover svg{
+    animation: grandirTourner infinite 3s forwards;
+}
+@keyframes grandirTourner {
+    0%{
+        transform: rotate(20deg);
+    }
+    50%{
+        transform: rotate(-20deg);
+    }
+    100%{
+        transform: rotate(20deg);
+    }
 }
 .avantage-titre{
     color: var(--primary-color);
@@ -482,7 +562,7 @@ header{
     background: transparent;
     border: 1px solid var(--primary-color);
     border-radius: 50%;
-    animation: pulsation infinite 2s forwards;
+    animation: pulsation infinite 3s forwards;
     width: 200px;
     height: 200px;
     position: absolute;
@@ -542,6 +622,62 @@ header{
 }
 
 /**/
+
+@media (max-width: 768px) {
+    .desktop{
+        display: none;
+    }
+    .mobile{
+        display: flex;
+    }
+    .bouton{
+        padding: 10px 15px;
+        border-radius: 7px;
+    }
+    .carousel-slide{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .slide-title{
+        font-size: 2.5em;
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+    .slide-text{
+        width: 100%;
+    }
+    .carousel-nav{
+       top: 90%; 
+    }
+    .carousel-btn{
+        display: none;
+    }
+    .section-container{
+        flex-direction: column;
+    }
+    .section-sous-title, .section-sous-title1{
+        font-size: 2.5em;
+    }
+    .section-texte{
+        margin: 15px 0;
+    }
+    .section-container img{
+        width: 100%;
+    }
+    .avantages{
+        flex-direction: column;
+    }
+    .decale-haut{
+        transform: translateY(0);
+    }
+    .cercle-anime{
+        right: 2%;
+        bottom: 5%;
+    }
+    .footer-top{
+        flex-direction: column;
+    }
+}
 
 /*scroll bar*/
 /* Pour Chrome, Edge, Safari (WebKit) */
