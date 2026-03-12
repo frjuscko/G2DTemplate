@@ -307,6 +307,10 @@ header{
 .part{
     padding: 0 6%;
 }
+.part1{
+    padding: 0 6%;
+    flex: 1;
+}
 .left{
     display: flex;
     flex-direction: column;
@@ -581,7 +585,71 @@ header{
         opacity: 0;
     }
 }
-
+.cover{
+    padding: 7% 6%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.chemin a{
+    color: var(--details);
+}
+.chemin span{
+    margin: 0 10px;
+}
+.chemin .index{
+    color: var(--accent);
+}
+.element{
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(0, 0, 0, 0.123);
+    padding: 15px 0;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.053);
+    margin: 10px 0;
+}
+.element:hover{
+    background: rgba(0, 0, 0, 0.045);
+}
+.element-number{
+    padding: 20px;
+    font-family: 'Quicksand', sans-serif;
+}
+.element:hover .element-number{
+    color: var(--primary-color);
+}
+.element-texte-box{
+    width: 100%;
+}
+.element-title{
+    margin: 0 0 15px 0;
+}
+.element:hover .element-title{
+    color: var(--primary-color);
+}
+.element-texte{
+    display: none;
+}
+.element:hover .element-texte{
+    display: flex;
+}
+.element-btn{
+    background: rgba(0, 0, 0, 0.01);
+    border: 1px solid rgba(0, 0, 0, 0.077);
+    padding: 10px 15px;
+    border-radius: 50%;
+    margin: 10px;
+}
+.element:hover .element-btn{
+    transform: rotate(180deg);
+    background: var(--neutre);
+    color: var(--primary-color);
+    border: none;
+}
+.text-gris{
+    color: var(--details);
+}
 .footer-top{
     display: flex;
     padding: 5% 6% 0;
