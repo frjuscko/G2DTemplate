@@ -604,6 +604,11 @@ header{
 .logo-link1 img{
     filter: brightness(1);
 }
+.link1 svg{
+    margin-right: 10px;
+    width: 15px;
+    height: 15px;
+}
 #footer-text{
     margin: 15px 0;
 }
@@ -613,6 +618,8 @@ header{
 .link1{
     color: var(--texte);
     transition: .5s ease;
+    display: flex;
+    align-items: center;
 }
 .link1:hover{
     color: var(--primary-color);
@@ -651,6 +658,10 @@ header{
     }
     .carousel-btn{
         display: none;
+    }
+    .utilisateur{
+        width: 40px;
+        height: 40px;
     }
     .section-container{
         flex-direction: column;
