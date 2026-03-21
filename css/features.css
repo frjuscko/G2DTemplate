@@ -14,10 +14,12 @@
     box-sizing: border-box;
     font-family: 'Outfit', sans-serif;
 }
-a{
+
+a {
     text-decoration: none;
 }
-ul{
+
+ul {
     list-style: none;
 }
 
@@ -98,13 +100,14 @@ ul{
     height: 100vh;
     padding: 5% 6%;
     position: relative;
-    background: #3333331b;
+    background: #33333311;
 }
-.cover-texte{
+
+.cover-texte {
     width: 50%;
 }
 
-.cover-texte+.cover-texte{
+.cover-texte+.cover-texte {
     margin: 15px 0;
 }
 
@@ -139,52 +142,66 @@ ul{
     gap: 15px;
     width: 100%;
 }
-.offre{
+
+.offre {
     background: var(--neutre);
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.205);
-    padding: 40px 25px;
+    padding: 20px 25px;
     position: relative;
     width: 23vw;
+    height: 74vh;
     border-radius: 7px;
 }
-.offre .icone{
+
+.offre:hover {
+    height: 75vh;
+}
+
+.offre .icone {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 40px 0;
 }
-.icone svg{
+
+.icone svg {
     width: 80px;
     height: 80px;
     color: var(--primary-color);
 }
-.offre-title{
+
+.offre-title {
     color: var(--texte);
     font-size: 1.1em;
     font-weight: 500;
     margin: 0 0 15px 0;
 }
-.offre-liste{
+
+.offre-liste {
     margin: 15px 0;
 }
-.offre-liste-element{
+
+.offre-liste-element {
     padding: 5px 0;
     display: flex;
     align-items: center;
     cursor: pointer;
 }
-.offre-liste-element:hover{
+
+.offre-liste-element:hover {
     color: var(--primary-color);
     border-radius: 7px;
     transition: .5s ease;
 }
-.offre-liste-element:hover svg{
+
+.offre-liste-element:hover svg {
     background: var(--primary-color);
     transform: scale(1.5);
     color: var(--neutre);
 }
-.offre-liste-element svg{
+
+.offre-liste-element svg {
     width: 15px;
     height: 15px;
     color: var(--details);
@@ -194,41 +211,240 @@ ul{
     border-radius: 7px;
     transition: .5s ease;
 }
-.action{
+
+.action {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.price h2{
+
+.price h2 {
     color: var(--primary-color);
     font-weight: 800;
 }
-.action button{
+
+.action a {
     padding: 10px 15px;
     background: var(--neutre);
     border: 1px solid var(--primary-color);
     color: var(--primary-color);
     border-radius: 7px;
 }
-.action button:hover{
+
+.action a:hover {
     background: var(--primary-color);
     color: var(--neutre);
 }
-.action button svg{
+
+.action a svg {
     width: 20px;
     height: 20px;
 }
-.details{
-    font-size: 0.8em;
+
+.indications {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
 }
-.gris{
+
+.offre:hover .indications {
+    display: flex;
+}
+
+.form-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.14);
+    backdrop-filter: blur(10px);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.from-box {
+    background: var(--neutre);
+    padding: 2% 2%;
+    border-radius: 14px;
+    position: relative;
+    animation: fluide .5s forwards;
+    opacity: 0;
+}
+
+.close-btn {
+    padding: 2px 6px;
+    background: var(--accent);
+    color: var(--neutre);
+    border-radius: 7px;
+    position: absolute;
+    top: 2%;
+    right: 1%;
+}
+
+.close-btn svg {
+    width: 15px;
+    height: 15px;
+}
+
+.form-texte {
+    margin: 15px 0;
+}
+
+.form-title {
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 1.2em;
+}
+
+.form-section {
+    display: flex;
+    gap: 15px;
+}
+
+.part {
+    border: 1px solid rgba(0, 0, 0, 0.127);
+    width: 300px;
+    border-radius: 7px;
+    padding: 10px 8px;
+    position: relative;
+}
+
+.form-section-title {
+    font-size: 0.9em;
+    font-weight: 600;
+    color: var(--texte);
+    margin: 0 0 10px 0;
+}
+
+.input-box {
+    background: rgba(0, 0, 0, 0.037);
+    width: 100%;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box+.input-box {
+    margin: 10px 0;
+}
+
+.input-box select,
+.input-box input {
+    border: none;
+    background: transparent;
+    color: var(--texte);
+    outline: none;
+}
+
+.input-box input {
+    padding: 5px;
+}
+
+.input-box label {
+    margin: 5px 0 0 5px;
+    font-size: 0.7em;
+    font-weight: 700;
     color: var(--details);
 }
-.fluide{
+
+.op-box label {
+    margin: 0;
+    font-size: 0.7em;
+    font-weight: 700;
+    color: var(--details);
+}
+
+.price-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price-box h2 {
+    font-size: 1.1em;
+    color: var(--accent);
+    font-weight: 800;
+}
+
+.btns {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+}
+
+.btns button {
+    padding: 15px 20px;
+    margin: 3px 0;
+    border-radius: 7px;
+}
+
+.valid {
+    background: var(--primary-color);
+    color: var(--neutre);
+    border: none;
+}
+
+.valid:hover {
+    background: #024ab5;
+}
+
+.reset {
+    background: var(--neutre);
+    border: 1px solid rgba(0, 0, 0, 0.162);
+    color: var(--texte);
+}
+
+.reset:hover {
+    background: rgba(110, 0, 0, 0.101);
+    color: red;
+    border-color: rgba(255, 0, 0, 0.159);
+}
+
+.details {
+    font-size: 0.8em;
+}
+
+.gris {
+    color: var(--details);
+}
+
+.fluide {
     transition: .5s ease;
 }
+
+@keyframes fluide {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 @media (max-width: 768px) {
+    .steps {
+        display: none;
+    }
+
+    .cover-texte {
+        width: 100%;
+    }
+
+    .offre {
+        width: 80vw;
+        height: 56vh;
+    }
+
+    .offre:hover {
+        height: 58vh;
+    }
+
     .offres {
         flex-direction: column;
         align-items: center;
@@ -236,6 +452,22 @@ ul{
 
     .offre+.offre {
         margin: 15px 0;
+    }
+
+    .from-box{
+        padding: 8% 2% 2% 2%;
+    }
+
+    .close-btn{
+        top: 1%;
+    }
+
+    .form-section{
+        flex-direction: column;
+    }
+
+    .part{
+        flex: 1;
     }
 }
 
