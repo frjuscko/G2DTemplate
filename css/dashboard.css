@@ -180,13 +180,6 @@ main {
     color: var(--primary-color);
 }
 
-.search-box button {
-    background: var(--primary-color);
-    padding: 8px 13px;
-    border-radius: 7px;
-    color: var(--neutre);
-    border: none;
-}
 
 .actions {
     display: flex;
@@ -209,6 +202,22 @@ main {
 
 .btns:hover {
     background: #0d6dfd3c;
+}
+.btn-link{
+    color: var(--neutre);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: var(--primary-color);
+    border: none;
+    width: 60px;
+    height: 60px;
+    transition: .5s ease;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.144);
+}
+.btn-link:hover {
+    background: #0544a2;
 }
 
 .dot {
@@ -301,6 +310,13 @@ main {
 .logout a:hover{
     background: #0d6dfd7a;
 }
+
+.boutons{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    padding: 1% 6%;
+}
 .ressources-grid{
     display: grid;
     grid-template-columns: 300px 300px 300px 300px;
@@ -339,6 +355,12 @@ main {
     width: 100%;
     height: 100%;
 }
+.ressource-infos{
+    width: 70%;
+}
+.ressource-title{
+    color: var(--texte);
+}
 .ressource-classe{
     color: var(--primary-color);
     margin: 10px 0;
@@ -352,6 +374,7 @@ main {
 .bottom{
     display: flex;
     align-items: end;
+    justify-content: space-between;
     gap: 15px;
     margin: 5px 0 0 0;
 }
@@ -364,6 +387,25 @@ main {
 }
 .gris-details{
     color: var(--details);
+}
+
+@media (max-width: 768px) {
+    .menu{
+        display: none;
+    }
+    .bar{
+        flex-direction: row-reverse;
+    }
+    .search-box{
+        display: none;
+    }
+    .interface{
+        width: 100vw;
+    }
+    .ressources-grid{
+        grid-template-columns: 380px;
+        gap: 15px;
+    }
 }
 
 /*scroll bar*/

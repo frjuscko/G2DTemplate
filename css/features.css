@@ -149,12 +149,7 @@ ul {
     padding: 20px 25px;
     position: relative;
     width: 23vw;
-    height: 74vh;
     border-radius: 7px;
-}
-
-.offre:hover {
-    height: 75vh;
 }
 
 .offre .icone {
@@ -243,15 +238,12 @@ ul {
 }
 
 .indications {
-    display: none;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 0;
 }
 
-.offre:hover .indications {
-    display: flex;
-}
 
 .form-container {
     position: fixed;
@@ -438,11 +430,6 @@ ul {
 
     .offre {
         width: 80vw;
-        height: 56vh;
-    }
-
-    .offre:hover {
-        height: 58vh;
     }
 
     .offres {

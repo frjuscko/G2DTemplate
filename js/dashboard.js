@@ -8,7 +8,7 @@ const systemMenu = document.querySelector('.system-menu');
 
 
 themeBtn.addEventListener('click', () => {
-    themeMenu.classList.toggle('active');
+    afficherBref(themeMenu);
 })
 
 darkBtn.addEventListener('click', () => {
@@ -26,5 +26,30 @@ if (localStorage.getItem("theme") === "dark") {
 }
 
 systBtn.addEventListener('click', () => {
-    systemMenu.classList.toggle('show');
+    afficherBref(systemMenu);
 })
+
+// Fermer le sous-menu avec la touche Échap
+document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+        close(themeMenu);
+        close(systemMenu);
+    }
+});
+
+// Fermer le sous-menu en cliquant ailleurs
+document.addEventListener('click', function (e) {
+    if (!themeBtn.contains(e.target)) {
+        close(themeMenu);
+    }
+    if (!systBtn.contains(e.target)) {
+        close(systemMenu);
+    }
+});
+
+function close(menu) {
+    menu.classList.remove('show');
+}
+function afficherBref(menu) {
+    menu.classList.toggle('show');
+}
