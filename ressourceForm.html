@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/ressource.css">
+        <script src="js/ressource.js" defer></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <main>
+            <a href="ressourceContributeur.html" class="btn-link"><svg xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24" fill="currentColor"><path
+                        d="M5.82843 6.99955L8.36396 9.53509L6.94975 10.9493L2 5.99955L6.94975 1.0498L8.36396 2.46402L5.82843 4.99955H13C17.4183 4.99955 21 8.58127 21 12.9996C21 17.4178 17.4183 20.9996 13 20.9996H4V18.9996H13C16.3137 18.9996 19 16.3133 19 12.9996C19 9.68584 16.3137 6.99955 13 6.99955H5.82843Z"></path></svg></a>
+            <div class="container">
+                <p class="title">Ajouter une nouvelle ressource</p>
+                <p class="texte">Cours, exercices, supports ou documents :
+                    donnez vie à vos
+                    contenus en quelques clics. Chaque ressource que vous
+                    publiez aide quelqu'un à progresser.</p>
+                <div class="slides">
+                    <div class="slide">
+                        <div class="form-group">
+                            <label for>Titre</label>
+                            <input type="text">
+                        </div>
+                        <div class="form-group">
+                            <label>Fichiers <span>*</span></label>
+                            <!-- Zone d'upload -->
+                            <div class="upload-area" id="uploadArea">
+                                <div class="upload-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M4 1V4H1V6H4V9H6V6H9V4H6V1H4ZM11 5C11 8.31371 8.31371 11 5 11C4.29873 11 3.62556 10.8797 3 10.6586V20.0066C3 20.5551 3.44694 21 3.99826 21H14V15C14 14.45 14.45 14 15 14H21V3.9985C21 3.44749 20.5552 3 20.0066 3H10.6586C10.8797 3.62556 11 4.29873 11 5ZM21 16L16 20.997V16H21Z"></path></svg></div>
+                                <h3>Importez vos fichiers</h3>
+                                <p>Glissez votre fichier ou cliquez pour
+                                    importer (PDF, vidéo, image...)</p>
+                                <button type="button" class="upload-btn"
+                                    id="uploadBtn">Choisir des
+                                    fichiers</button>
+                                <input type="file" id="fileInput"
+                                    class="file-input" multiple
+                                    accept="image/*,video/*,.pdf,.doc,.docx,.ppt,.pptx">
+                            </div>
+
+                            <!-- Liste des fichiers -->
+                            <div id="filesList" class="files-list"></div>
+                        </div>
+                        <div class="btns">
+                            <button class="reset">Effacer</button>
+                            <button class="valide next">Suivant</button>
+                        </div>
+                    </div>
+                    <div class="slide">
+                        <div class="select-cases">
+                            <div class="select-case">
+                                <label for>Niveau</label>
+                                <select>
+                                    <option value="">Niveau</option>
+                                </select>
+                            </div>
+                            <div class="select-case">
+                                <label for>Série</label>
+                                <select>
+                                    <option value="">Série</option>
+                                </select>
+                            </div>
+                            <div class="select-case">
+                                <label for>Classe</label>
+                                <select>
+                                    <option value="">Classe</option>
+                                </select>
+                            </div>
+                            <div class="select-case">
+                                <label for>Matière</label>
+                                <select>
+                                    <option value="">Matière</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Description <span>*</span></label>
+                            <textarea name="" id=""></textarea>
+                        </div>
+                        <div class="btns">
+                            <button class="reset prev">Précédent</button>
+                            <button class="valide">Publier</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
