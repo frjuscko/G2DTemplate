@@ -382,9 +382,7 @@ main {
 .bold{
     font-weight: 700;
 }
-.mini{
-    font-size: 0.6em;
-}
+
 .gris-details{
     color: var(--details);
 }
