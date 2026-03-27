@@ -1,6 +1,6 @@
 :root {
     --primary-color: #0d6efd;
-    --accent: rgb(255, 204, 0);
+    --accent: #FFAF01;
     --neutre: white;
     --texte: #333;
     --details: #333333e2;
@@ -911,6 +911,191 @@ header {
     border-radius: 7px;
 }
 
+.banderole {
+    padding: 5% 14%;
+    color: var(--neutre);
+    display: flex;
+    flex-direction: column;
+}
+
+.band1 {
+    background: radial-gradient(#ffaf017f, #ffaf01), url('../img/livre-en-bibliotheque-avec-manuel-ouvert.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.band2 {
+    background: radial-gradient(#0d6dfd7d, #0d6dfd), url('../img/livre-en-bibliotheque-avec-manuel-ouvert.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    align-items: end;
+    text-align: end;
+}
+
+.band-title-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    border: 1px solid #ffaf01;
+    padding: 6px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.163);
+}
+
+.band-title {
+    margin: 0 25px;
+    width: 60%;
+}
+
+.banderole img {
+    height: 80px;
+    border-radius: 7px;
+}
+
+.band-text-container {
+    width: 50%;
+}
+
+.band-text {
+    margin: 15px 0 30px;
+}
+
+.band-btn {
+    background: var(--accent);
+    color: var(--neutre);
+    border: none;
+    padding: 20px 25px;
+    border-radius: 7px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.195);
+}
+
+.search-zone {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-btn {
+    border: none;
+    padding: 15px 20px;
+    border-radius: 20px;
+    color: var(--neutre);
+}
+
+.search-input {
+    background: rgba(0, 0, 0, 0.052);
+    border: 1px solid rgba(0, 0, 0, 0.052);
+    outline: none;
+    height: 40px;
+    border-radius: 20px;
+    width: 30vw;
+    padding: 15px;
+}
+
+.search-input:focus {
+    color: var(--primary-color);
+}
+
+.photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--neutre);
+}
+
+.photo img {
+    width: 40px;
+}
+
+.ressources-grid {
+    display: grid;
+    grid-template-columns: 300px 300px 300px 300px;
+    gap: 10px;
+    padding: 2% 3%;
+}
+
+.ressource {
+    background: var(--card-bg);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
+    border-radius: 7px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.233);
+}
+
+.ressource-type {
+    position: absolute;
+    top: 1%;
+    right: 2%;
+    background: var(--accent);
+    border-radius: 7px;
+    padding: 5px;
+    color: var(--neutre);
+}
+
+.ressource-image {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ressource-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.ressource-infos {
+    width: 70%;
+}
+
+.ressource-title {
+    color: var(--texte);
+}
+
+.ressource-classe {
+    color: var(--primary-color);
+    margin: 10px 0;
+}
+
+.auteur-link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.bottom {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 15px;
+    margin: 5px 0 0 0;
+}
+
+.mini {
+    font-size: 0.6em;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.gris-details {
+    color: var(--details);
+}
+
 /**/
 
 @media (max-width: 768px) {
@@ -984,12 +1169,14 @@ header {
         right: 2%;
         bottom: 5%;
     }
-    #valeur-img{
+
+    #valeur-img {
         height: 60vh;
     }
+
     .valeurs {
         left: 0;
-}
+    }
 
     .case+.case {
         margin: 15px 0;
