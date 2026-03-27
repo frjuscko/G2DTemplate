@@ -677,6 +677,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height: 80vh;
 }
 
 .chemin a {
@@ -1185,6 +1186,11 @@ header {
     .methogologies {
         flex-direction: column;
         padding: 5% 4%
+    }
+
+    .ressources-grid{
+        grid-template-columns: 380px;
+        gap: 15px;
     }
 
     .footer-top {
