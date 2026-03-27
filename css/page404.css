@@ -1,0 +1,103 @@
+:root {
+    --primary-color: #0d6efd;
+    --accent: #FFAF01;
+    --neutre: white;
+    --texte: #333;
+    --details: #333333e2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+main{
+    background: url('../img/clouds-sky.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+.logo {
+    display: flex;
+    gap: 15px;
+    position: absolute;
+    top: 8%;
+    left: 6%;
+    z-index: 1;
+}
+
+.logo img {
+    width: 40px;
+    margin-right: 15px;
+    filter: brightness(100);
+}
+
+.logo .logo-link {
+    color: var(--neutre);
+    display: flex;
+    align-items: center;
+    font-weight: 800;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(#0d6dfd51, #002d6f9e);
+    backdrop-filter: blur(10px);
+    color: var(--neutre);
+    text-align: center;
+}
+h1{
+    font-size: 3.5em;
+    font-weight: 900;
+    margin: 0 0 30px 0;
+}
+.body{
+    font-size: 1.1em;
+    margin: 15px 0;
+}
+.details{
+    font-size: 0.8em;
+    width: 30%;
+}
+.btns{
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.btns a{
+    padding: 15px 20px;
+    border-radius: 7px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.241);
+    font-size: 0.8em;
+}
+.home-link{
+    color: var(--neutre);
+    background: var(--primary-color);
+}
+.resources-link{
+    color: var(--primary-color);
+    background: var(--neutre);
+}
+
+@media (max-width: 768px) {
+    .body{
+        margin: 20px 0;
+    }
+    .details{
+        width: 80%;
+    }
+    .btns{
+        flex-direction: column;
+    }
+}
