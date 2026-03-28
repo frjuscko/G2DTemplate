@@ -1141,6 +1141,10 @@ header {
         height: 40px;
     }
 
+    .cover{
+        height: 40vh;
+    }
+
     .section-container {
         flex-direction: column;
     }
@@ -1187,10 +1191,22 @@ header {
         flex-direction: column;
         padding: 5% 4%
     }
-
+    .banderole{
+        padding: 5% 8%;
+    }
+    .band-title{
+        font-size: 1.1em;
+    }
+    .band-text-container{
+        width: 100%;
+    }
+    .search-input{
+        width: 60vw;
+    }
     .ressources-grid{
-        grid-template-columns: 380px;
+        grid-template-columns: 320px;
         gap: 15px;
+        padding: 8% 6%;
     }
 
     .footer-top {
