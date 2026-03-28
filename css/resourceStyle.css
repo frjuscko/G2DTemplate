@@ -1,0 +1,398 @@
+:root {
+    --primary-color: #0d6efd;
+    --accent: #FFAF01;
+    --neutre: white;
+    --texte: #333;
+    --details: #333333e2;
+    --bg-color: white;
+    --card-bg: white;
+    --media-bg: rgba(0, 0, 0, 0.101);
+}
+
+/*@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #333;
+    --texte: white;
+    --details: white;
+  }
+}*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+body {
+    color: var(--texte);
+}
+
+a {
+    text-decoration: none;
+}
+
+svg {
+    width: 15px;
+    height: 15px;
+}
+
+.btn-link{
+    color: var(--neutre);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: var(--primary-color);
+    border: none;
+    width: 60px;
+    height: 60px;
+    transition: .5s ease;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.144);
+    margin: 5% 6% 0;
+}
+.btn-link:hover {
+    background: #0544a2;
+}
+.btn-link svg{
+    width: 20px;
+    height: 20px;
+}
+
+.container {
+    padding: 5% 6%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card1 {
+    width: 40vw;
+    position: relative;
+}
+
+.ressorce-media-card {
+    position: relative;
+    width: 40vw;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--media-bg);
+    border-radius: 7px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.ressorce-media-card img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.medias {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 5px;
+    overflow-x: auto;
+    padding: 5px;
+}
+
+.media {
+    width: 100px;
+    height: 100px;
+    min-width: 100px;
+    min-height: 100px;
+    border-radius: 7px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: var(--media-bg);
+}
+
+.media img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.description {
+    margin: 30px 0;
+}
+
+.react-stat {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 0;
+}
+
+.react-stat button {
+    background: rgba(0, 0, 0, 0.118);
+    padding: 5px 8px;
+    border-radius: 50%;
+    border: none;
+    color: var(--details);
+}
+
+.user-form {
+    display: flex;
+    gap: 15px;
+    width: 40vw;
+    margin: 20px 0;
+}
+
+.user {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.user img {
+    width: 100%;
+}
+
+.comment-form {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    width: 33vw;
+    border: 1px solid rgba(0, 0, 0, 0.14);
+    border-radius: 20px;
+}
+
+.comment-form textarea {
+    max-width: 100%;
+    max-height: 100%;
+    min-height: 100%;
+    min-width: 100%;
+    border: none;
+    background: transparent;
+    outline: none;
+    padding: 10px 10px;
+}
+
+.comment-form textarea:focus {
+    color: var(--primary-color);
+}
+
+.comment-form button {
+    background: var(--neutre);
+    border: 1px solid rgba(0, 0, 0, 0.193);
+    color: var(--details);
+    transition: .5s ease;
+    position: absolute;
+    right: -10%;
+    top: 1%;
+    border-radius: 50%;
+    padding: 8px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.comment-form textarea:focus~button,
+.comment-form textarea:valid~button {
+    color: var(--primary-color);
+    border-color: #0d6dfd59;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.195);
+}
+
+.comment-form button svg {
+    width: 20px;
+    height: 20px;
+}
+
+.comment {
+    display: flex;
+    gap: 10px;
+    margin: 40px 0;
+}
+
+.comment-text {
+    margin: 5px 0 10px 0;
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: 300px;
+    gap: 15px;
+    padding: 2% 3%;
+    margin-top: 20px;
+}
+
+.ressource {
+    background: var(--card-bg);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
+    border-radius: 7px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.233);
+}
+
+.ressource-type {
+    position: absolute;
+    top: 1%;
+    right: 2%;
+    background: var(--accent);
+    border-radius: 7px;
+    padding: 5px;
+    color: var(--neutre);
+}
+
+.ressource-image {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ressource-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.ressource-infos {
+    width: 70%;
+}
+
+.ressource-title {
+    color: var(--texte);
+}
+
+.ressource-classe {
+    color: var(--primary-color);
+    margin: 10px 0;
+}
+
+.auteur-link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.bottom {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 15px;
+    margin: 5px 0 0 0;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.details {
+    font-size: 0.7em;
+}
+
+.details span {
+    margin: 0 5px;
+}
+
+.mini {
+    font-size: 0.6em;
+}
+
+.gris-clr {
+    color: var(--details);
+}
+
+.blue-clr {
+    color: var(--primary-color)
+}
+
+.title {
+    font-size: 1.2em;
+    margin-bottom: 25px;
+}
+
+.auteur-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.name {
+    margin: 10px 0;
+}
+
+.role {
+    margin: 0 0 30px;
+}
+
+.profil-link {
+    color: var(--neutre);
+    background: var(--primary-color);
+    padding: 20px 25px;
+    border-radius: 14px;
+    font-size: 0.7em;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card1 {
+        width: 90vw;
+        position: relative;
+    }
+    .ressorce-media-card{
+        width: 100%;
+    }
+
+    .user-form{
+        width: 100%;
+    }
+
+    .comment-form{
+        width: 70%;
+    }
+
+    .auteur-card {
+        padding-bottom: 50px;
+    }
+    .related-card{
+        width: 100%;
+    }
+
+    .ressources-grid {
+        gap: 15px;
+    }
+}
+
+
+
+/*scroll bar*/
+/* Pour Chrome, Edge, Safari (WebKit) */
+::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.086);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+}
