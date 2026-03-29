@@ -1,0 +1,165 @@
+.interface{
+    display: flex;
+    gap: 10px;
+}
+/*style pour la carte de profil*/
+.profil-left{
+    height: 95%;
+    margin-left:10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:var(--neutre);
+    border-radius: 10px;
+    box-shadow: 10px/*ombre droite*/ 10px/*ombre du bas*/ 14px 10px/*ombre du container avec 10px best*/ rgb(0, 0, 0, 0.1); /*box-shadow permet de mettre la div en 3D*/
+    overflow: hidden ;/*hidden pour cacher toutes les imperfections*/
+    width: 300px;
+}
+ /*style pour l'image profil*/
+ .profil-image{
+    width: 100%;
+    display: flex;
+    justify-content: center; /*Centrer le contenu*/
+    padding: 20px;
+ }
+
+ /*syle image*/
+ .profil-image img{
+    border: 4px solid var(--primary-color);
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    object-fit: cover;/*permet a l'image de se redimentionner*/
+ }
+
+ /*style pour les  informations de profil*/
+ .profil-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+ }
+
+
+ .profil-info .name{
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #333;
+ }
+ .profil-info .description{
+    margin-bottom: 60px;
+    font-size: 16px;
+    color: gray;
+ }
+
+ .profil-right{
+    height: 95%;
+    min-width: 75%;
+    display: flex;
+    flex-direction: column;
+    background-color:var(--neutre);
+    border-radius: 10px;
+    box-shadow: 10px/*ombre droite*/ 10px/*ombre du bas*/ 14px 10px/*ombre du container avec 10px best*/ rgb(0, 0, 0, 0.1); /*box-shadow permet de mettre la div en 3D*/
+    overflow: hidden ;/*hidden pour cacher toutes les imperfections*/
+    padding: 30px;
+    border-radius: 8px;
+    }
+
+    .profil-right h2 {
+      margin-bottom: 20px;
+      font-size: clamp(12px, 5vw, 20px);
+      color:var(--primary-color);
+    }
+    .profil-right h3 {
+      margin-bottom: 20px;
+      font-size: clamp(10px, 3vw, 14px);
+      color: var(--details);
+    }
+    form{
+        gap: 20px;
+    }
+    .profil-right .items label {
+      display: block;
+      font-size: clamp(10px, 2vw, 12px);
+      color: var(--details);
+    }
+
+    form .news {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      font-size: 12px;
+      margin-bottom: 30px;
+    }
+form .items{
+    margin-bottom: 20px;
+}
+    form .name-news {
+      width: 48%;
+    }
+
+    form .inline {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    form .inline input {
+      height: 10px;
+      width: 10px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      background-color: aliceblue;
+    }
+
+    input:focus,
+    textarea:focus {
+      border: 1px solid #8283E3;
+    }
+
+    form textarea {
+      height: 120px;
+      resize: none;
+    }
+
+    form button[type="submit"] {
+      cursor: pointer;
+      border: none;
+      width: 100%;
+      padding: 12px;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      margin-top: 20px;
+      border-radius: 5px;
+    }
+
+    form button[type="submit"]:hover {
+      background-color: #0056b3;
+      color: aliceblue;
+    }
+
+    form button[type="reset"] {
+      cursor: pointer;
+      border: none;
+      width: 100%;
+      padding: 12px;
+      background-color: #C9C9C9;
+      border: none;
+      margin-top: 20px;
+      border-radius: 5px;
+    }
+
+    form button[type="reset"]:hover {
+      background-color: rgba(128, 128, 128, 0.978);
+      color: azure;
+    }
