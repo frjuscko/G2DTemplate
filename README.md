@@ -32,11 +32,11 @@ Ce répertoire contient l'ensemble des ressources front-end (HTML, CSS, JS) du p
 1. Clonez le répertoire dans votre dossier local :
    ```bash
    git clone https://github.com/frjuscko/G2DTemplate.git
-    
+
    ```
 2. Ouvrez le fichier `index.html` (ou intégrez les vues dans vos templates Blade Laravel).
 3. Assurez-vous que les chemins des fichiers CSS et JS sont correctement configurés dans vos balises `<link>` et `<script>`.
 
 ---
 *Développé pour le projet G2D Bénin.*
-[G2D Bénin](img/Accueil.png)
+![G2D Bénin](img/Accueil.png)

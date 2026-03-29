@@ -1,0 +1,140 @@
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* --- Layout --- */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    padding: 0 20px; /* Sécurité pour mobile */
+}
+
+.thanks h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: clamp(20px, 5vw, 28px);
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: var(--primary-color);
+}
+
+/* --- Card Style --- */
+.card {
+    height: auto;
+    min-height: 350px;
+    width: 500px;
+    padding: 40px;
+    background-color: var(--neutre);
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+/* --- Animation Email --- */
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: -15px;
+    position: relative;
+    margin-bottom: 25px;
+    height: 60px;
+}
+
+.icon-bg {
+    width: 22px;
+    color: #d1d5db;
+    z-index: 1;
+}
+
+.icon-main-wrapper {
+    width: 32px;
+    height: 32px;
+    color: #6366f1;
+    background: #eef2ff;
+    padding: 6px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    animation: duplicateAndFly 2.2s infinite cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes duplicateAndFly {
+    0% { transform: translateX(-35px) scale(0.8); opacity: 0; }
+    20% { transform: translateX(-35px) scale(1.1); opacity: 1; }
+    40% { transform: translateX(0) scale(1); opacity: 1; }
+    100% { transform: translateX(80px); opacity: 0; }
+}
+
+/* --- Text Content --- */
+.profil-info {
+    margin-top: 10px;
+    gap: 20px; 
+}
+
+.profil-info .name {
+    color: var(--primary-color);
+   font-size: 1.2rem;
+    line-height: 1.4;
+    max-width: 300px;
+}
+
+.profil-info .description {
+    font-size: 16px;
+    color: gray;
+    max-width: 90%;
+}
+
+.profil-info .description strong {
+    font-weight: 600;
+    color: #333;
+}
+
+.action-container {
+    margin-top: auto; 
+    padding-top: 30px;
+}
+
+.link-cancel {
+    color: #a0a0a0;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+/* =============================================
+   VERSION MOBILE (Ajoutée)
+   ============================================= */
+@media (max-width: 600px) {
+    .container {
+        margin-top: 80px; /* Moins d'espace en haut sur mobile */
+    }
+
+    .card {
+        width: 100%;
+        max-width: 340p;
+        height: auto;
+        padding: 40px 10px;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.05); 
+    }
+
+    .thanks h2 {
+        font-size: 22px;
+    }
+
+    .profil-info .name {
+        font-size: 18px;
+    }
+
+    .profil-info .description {
+        font-size: 14px; 
+    }
+
+}
